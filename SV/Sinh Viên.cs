@@ -43,6 +43,7 @@ namespace SV
             row[3] = Khoa;
             row[4] = DTB;
             dt.Rows.Add(row);
+            stt++;
         }
 
         public static frmSV Instance;
