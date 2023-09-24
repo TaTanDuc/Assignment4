@@ -19,7 +19,7 @@ namespace SV
         {
             float dtb;
             bool result = float.TryParse(DTB,out dtb);
-            
+
             if (MSSV == "" || Ten == "" || DTB == "")
                 return -1;
             
@@ -27,10 +27,9 @@ namespace SV
                 return -2;
             
             if(dtb < 0 || dtb > 10) 
-                return -3;
-            
+                return -3;            
             for (int i = 0; i < dt.Rows.Count; i++)
-                if (dt.Rows[i].ToString() == MSSV)
+                if (dt.Rows[i].Field<string>("MSSV") == MSSV)
                     return -4;
             return 0;
         }
